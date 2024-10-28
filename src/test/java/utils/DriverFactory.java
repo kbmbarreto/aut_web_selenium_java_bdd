@@ -16,7 +16,7 @@ public class DriverFactory {
                 case "firefox":
                     System.setProperty("webdriver.gecko.driver", "src/test/java/drivers/geckodriver/geckodriver");
                     FirefoxOptions firefoxOptions = new FirefoxOptions();
-                    firefoxOptions.addArguments("--remote-allow-origins=*");
+                    //firefoxOptions.addArguments("--remote-allow-origins=*");
                     firefoxOptions.addArguments("--disable-web-security");
                     firefoxOptions.addArguments("--no-sandbox");
                     firefoxOptions.addArguments("--disable-dev-shm-usage");
