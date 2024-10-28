@@ -9,17 +9,14 @@ import org.openqa.selenium.firefox.FirefoxOptions;
 public class DriverFactory {
     private static WebDriver driver;
 
-    // Método para iniciar o WebDriver com base no navegador especificado
     public static WebDriver getDriver(String browser) {
         if (driver == null) {
             switch (browser.toLowerCase()) {
                 case "firefox":
-                    System.setProperty("webdriver.gecko.driver", "src/test/java/drivers/geckodriver/geckodriver");
+                    System.setProperty("webdriver.gecko.driver", "src/test/java/drivers/geckodriver/geckodriver.exe");
                     FirefoxOptions firefoxOptions = new FirefoxOptions();
-                    //firefoxOptions.addArguments("--remote-allow-origins=*");
                     firefoxOptions.addArguments("--disable-web-security");
                     firefoxOptions.addArguments("--no-sandbox");
-                    //firefoxOptions.addArguments("--disable-dev-shm-usage");
                     driver = new FirefoxDriver(firefoxOptions);
                     break;
 
@@ -40,7 +37,6 @@ public class DriverFactory {
         return driver;
     }
 
-    // Método para fechar o driver
     public static void closeDriver() {
         if (driver != null) {
             driver.quit();
