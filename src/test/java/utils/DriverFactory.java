@@ -19,7 +19,7 @@ public class DriverFactory {
                     //firefoxOptions.addArguments("--remote-allow-origins=*");
                     firefoxOptions.addArguments("--disable-web-security");
                     firefoxOptions.addArguments("--no-sandbox");
-                    firefoxOptions.addArguments("--disable-dev-shm-usage");
+                    //firefoxOptions.addArguments("--disable-dev-shm-usage");
                     driver = new FirefoxDriver(firefoxOptions);
                     break;
 
