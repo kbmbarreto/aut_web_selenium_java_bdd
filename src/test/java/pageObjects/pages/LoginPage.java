@@ -22,4 +22,15 @@ public class LoginPage {
     public void clickLoginButton() {
         driver.findElement(LoginElements.LOGIN_BUTTON).click();
     }
+
+    public String getErrorLoginMessage() {
+        return driver.findElement(LoginElements.ERROR_LOGIN_MESSAGE).getText();
+    }
+
+    public boolean areAllComponentsVisible() {
+        return driver.findElement(LoginElements.USERNAME_FIELD).isDisplayed() &&
+                driver.findElement(LoginElements.PASSWORD_FIELD).isDisplayed() &&
+                driver.findElement(LoginElements.LOGIN_BUTTON).isDisplayed() &&
+                driver.findElement(LoginElements.TITLE_ONE).isDisplayed();
+    }
 }
