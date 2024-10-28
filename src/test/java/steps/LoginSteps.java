@@ -4,17 +4,15 @@ import io.cucumber.java.en.Given;
 import io.cucumber.java.en.When;
 import io.cucumber.java.en.Then;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
 import pages.LoginPage;
+import utils.DriverFactory;
 
 public class LoginSteps {
-    private WebDriver driver;
+    private WebDriver driver = DriverFactory.getDriver();
     private LoginPage loginPage;
 
     @Given("que estou na página de login")
     public void que_estou_na_pagina_de_login() {
-        System.setProperty("webdriver.chrome.driver", "caminho/para/chromedriver");
-        driver = new ChromeDriver();
         driver.get("https://www.saucedemo.com/");
         loginPage = new LoginPage(driver);
     }
