@@ -8,7 +8,7 @@ import pageObjects.pages.LoginPage;
 import utils.DriverFactory;
 
 public class LoginSteps {
-    private final WebDriver driver = DriverFactory.getDriver();
+    private final WebDriver driver = DriverFactory.getDriver("firefox");
     private LoginPage loginPage;
 
     @Given("que estou na página de login")
