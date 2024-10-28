@@ -1,8 +1,8 @@
-package PageObjects.pages;
+package pageObjects.pages;
 
 import org.openqa.selenium.WebDriver;
 
-import PageObjects.elements.LoginElements;
+import pageObjects.elements.LoginElements;
 
 public class LoginPage {
     private final WebDriver driver;

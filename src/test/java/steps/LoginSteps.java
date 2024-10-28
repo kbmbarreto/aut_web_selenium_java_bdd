@@ -4,7 +4,7 @@ import io.cucumber.java.en.Given;
 import io.cucumber.java.en.When;
 import io.cucumber.java.en.Then;
 import org.openqa.selenium.WebDriver;
-import PageObjects.pages.LoginPage;
+import pageObjects.pages.LoginPage;
 import utils.DriverFactory;
 
 public class LoginSteps {
