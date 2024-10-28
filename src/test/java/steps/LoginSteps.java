@@ -4,11 +4,11 @@ import io.cucumber.java.en.Given;
 import io.cucumber.java.en.When;
 import io.cucumber.java.en.Then;
 import org.openqa.selenium.WebDriver;
-import pages.LoginPage;
+import PageObjects.pages.LoginPage;
 import utils.DriverFactory;
 
 public class LoginSteps {
-    private WebDriver driver = DriverFactory.getDriver();
+    private final WebDriver driver = DriverFactory.getDriver();
     private LoginPage loginPage;
 
     @Given("que estou na página de login")
@@ -31,5 +31,10 @@ public class LoginSteps {
     @Then("vejo a página de produtos")
     public void vejo_a_pagina_de_produtos() {
         // Validação para verificar se o login foi bem-sucedido
+    }
+
+    @Then("vejo as validações de erro na tela")
+    public void vejoAsValidaçõesDeErroNaTela() {
+
     }
 }
